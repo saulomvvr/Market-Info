@@ -3,6 +3,13 @@ import Coin from '../Coin';
 import bitcoin from '../../Imgs/icons_coins/bitcoin.png'
 import solana from '../../Imgs/icons_coins/solana.png'
 import ethereum from '../../Imgs/icons_coins/ethereum.png'
+import dogecoin from '../../Imgs/icons_coins/dogecoin.png'
+import shibainu from '../../Imgs/icons_coins/shiba-inu.png'
+import tether from '../../Imgs/icons_coins/tether.png'
+import bnb from '../../Imgs/icons_coins/bnb.png'
+import usdc from '../../Imgs/icons_coins/usdc.png'
+import xrp from '../../Imgs/icons_coins/xrp.png'
+import litecoin from '../../Imgs/icons_coins/litecoin.png'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -28,40 +35,46 @@ const Home = ({ receiveCoin }) => {
             img:solana
         },
         {
-            name:"Solana",
+            name:"Shiba Inu",
             value:141,
-            code:"SOL",
-            img:solana
+            code:"SHIB",
+            img:shibainu
         },
         {
-            name:"Solana",
+            name:"Dogecoin",
             value:141,
-            code:"SOL",
-            img:solana
+            code:"DOGE",
+            img:dogecoin
         },
         {
-            name:"Solana",
+            name:"Tether",
             value:141,
-            code:"SOL",
-            img:solana
+            code:"USDT",
+            img:tether
         },
         {
-            name:"Solana",
+            name:"BNB",
             value:141,
-            code:"SOL",
-            img:solana
+            code:"BNB",
+            img:bnb
         },
         {
-            name:"Solana",
+            name:"USDC",
             value:141,
-            code:"SOL",
-            img:solana
+            code:"USDC",
+            img:usdc
         },
         {
-            name:"Solana",
+            name:"XRP",
             value:141,
-            code:"SOL",
-            img:solana
+            code:"XRP",
+            img:xrp
+        }
+        {
+            name:"Litecoin",
+            value:141,
+            code:"LTC",
+            img:litecoin
         },
     ];
     return (

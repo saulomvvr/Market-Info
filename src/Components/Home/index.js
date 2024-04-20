@@ -166,4 +166,5 @@ const Home = ({ receiveCoin }) => {
         </section>
     )
 }
+//fdsf
 export default Home

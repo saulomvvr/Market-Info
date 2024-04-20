@@ -1,29 +1,37 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 
 const Header = () => {
+
     const [mode, setMode] = useState("Light");
-    const [buttonColor, setButtonColor] = useState('#000000');
+    const [themeStatus, setThemeStatus] = useState("☀️");
+
     function changeTheme(){
         if(mode === "Light"){
             setMode("Dark");
-            console.log("Dark");
+            setThemeStatus("🌑");
         }
         else{
             setMode("Light");
-            console.log("Light");
+            setThemeStatus("☀️");
         }
     };
+
     return (
-        <div className="mt-0 mw-100 w-auto mh-10 h-10 d-flex justify-content-between" style={{backgroundColor: '#482d7b'}}>
-            <h1 >
-                Market Info
+        <div className="m-0 p-2 mw-100 w-auto mh-10 h-10 d-flex justify-content-between align-middle" style={{backgroundColor: '#482d7b'}}>
+            <h1 className="font-weight-bold text-capitalize text-white">
+                market info
             </h1>
-            <Button style={{backgroundColor: {buttonColor}}} onClick={(e) => {changeTheme()}}>
-                {mode} Mode
-            </Button>{' '}
+        <Form>
+            <Form.Check
+                type="switch"
+                id="custom-switch"
+                onClick={(e) => (changeTheme())}
+                label={themeStatus}
+            />
+        </Form>
         </div>
       );
 }

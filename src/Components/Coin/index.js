@@ -11,7 +11,7 @@ const Coin = ({coin, receiveCoin}) =>{
                         {`${coin.code}`}
                     </h3>
                 </div>
-                <h3 className="text-light px-2">{`USD : ${coin.value.toFixed(2)}`}</h3>
+                <h3 className="text-light px-2">{`USD : ${coin.value}`}</h3>
             </div>
         </Link>
     )

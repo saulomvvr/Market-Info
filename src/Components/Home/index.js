@@ -3,80 +3,63 @@ import Coin from '../Coin';
 import bitcoin from '../../Imgs/icons_coins/bitcoin.png'
 import solana from '../../Imgs/icons_coins/solana.png'
 import ethereum from '../../Imgs/icons_coins/ethereum.png'
-import dogecoin from '../../Imgs/icons_coins/dogecoin.png'
-import shibainu from '../../Imgs/icons_coins/shiba-inu.png'
-import tether from '../../Imgs/icons_coins/tether.png'
-import bnb from '../../Imgs/icons_coins/bnb.png'
-import usdc from '../../Imgs/icons_coins/usdc.png'
-import xrp from '../../Imgs/icons_coins/xrp.png'
-import litecoin from '../../Imgs/icons_coins/litecoin.png'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { useEffect, useState } from 'react';
 
-const Home = ({ receiveCoin }) => {
-    const cotations = [
+const Home = ({ receiveCoin,order }) => {
+
+    const cotationsPerm=[
         {
             name:"Bitcoin",
             value:63600,
             code:"BTC",
-            img:bitcoin
+            img:bitcoin,
+            popular:1,
+            variant:2.5
         },
         {
             name:"Ethereum",
             value:3046,
             code:"ETH",
-            img:ethereum
+            img:ethereum,
+            popular:2,
+            variant:-2.5
         },
         {
             name:"Solana",
-            value:141,
+            value:312323,
             code:"SOL",
-            img:solana
+            img:solana,
+            popular:3,
+            variant:-6.5
         },
-        {
-            name:"Shiba Inu",
-            value:141,
-            code:"SHIB",
-            img:shibainu
-        },
-        {
-            name:"Dogecoin",
-            value:141,
-            code:"DOGE",
-            img:dogecoin
-        },
-        {
-            name:"Tether",
-            value:141,
-            code:"USDT",
-            img:tether
-        },
-        {
-            name:"BNB",
-            value:141,
-            code:"BNB",
-            img:bnb
-        },
-        {
-            name:"USDC",
-            value:141,
-            code:"USDC",
-            img:usdc
-        },
-        {
-            name:"XRP",
-            value:141,
-            code:"XRP",
-            img:xrp
-        },
-        {
-            name:"Litecoin",
-            value:141,
-            code:"LTC",
-            img:litecoin
-        },
-    ];
+        
+    ]
+
+    const [cotations,setCotations] =useState(cotationsPerm);
+
+    useEffect(()=>{
+        
+        if(order==="Popular"){
+            setCotations(cotationsPerm.sort(function(a,b){
+                if(a.popular>b.popular){
+                    return 1
+                }
+                if(a.popular<b.popular){
+                    return -1
+                }
+                return 0
+            }))
+        }
+        if(order==="EmBaixa"){
+            setCotations(cotationsPerm.filter((coin)=>{return coin.variant<0}))
+        }
+        if(order==="EmAlta"){
+            setCotations(cotationsPerm.filter((coin)=>{return coin.variant>=0}))
+        }
+    },[order])
+    
+
+    
     return (
         <section className='text-align-center'>
                     <div className='d-flex flex-wrap align-middle'>
@@ -89,5 +72,4 @@ const Home = ({ receiveCoin }) => {
         </section>
     )
 }
-//fdsf
 export default Home

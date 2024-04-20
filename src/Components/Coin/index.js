@@ -13,5 +13,6 @@ const Coin = ({coin}) =>{
             </div>
         </Link>
     )
+    //dfdsfsdf
 }
 export default Coin

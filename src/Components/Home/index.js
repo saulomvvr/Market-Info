@@ -69,14 +69,13 @@ const Home = ({ receiveCoin }) => {
             value:141,
             code:"XRP",
             img:xrp
-        },
+        }
         {
             name:"Litecoin",
             value:141,
             code:"LTC",
             img:litecoin
         },
-        
     ];
     return (
         <section className='text-align-center'>

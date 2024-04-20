@@ -5,9 +5,9 @@ import logoLinkedin from '../../Imgs/linkedin.png'
 import logoGithub from '../../Imgs/github.png'
 import logoTwitter from '../../Imgs/twitter.png'
 
-const Footer = () =>{
+const Footer = ({themeNowHF}) =>{
     return(
-        <footer style={{backgroundColor:"#482d7b"}}>
+        <footer style={{backgroundColor: themeNowHF}}>
             <div className='d-flex justify-content-center p-5'>
                 <img src={logoInsta} width={"64px"} className='mx-5'></img>
                 <img src={logoYoutube} width={"64px"} className='mx-5'></img>

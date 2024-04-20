@@ -14,5 +14,6 @@ const Coin = ({coin,receiveCoin}) =>{
             </div>
         </Link>
     )
+    //dfdsfsdf
 }
 export default Coin

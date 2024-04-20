@@ -36,16 +36,17 @@ function App() {
     }
   return (
     <>
-      <Header changeTheme = { changeTheme } themeStatus = { themeStatus } themeNowHF = { themeNowHF } themeNow = { themeNow } />
-      <div style={{height:"1000px", backgroundColor: themeNow}}>
-        <BrowserRouter>
+      <BrowserRouter>
+        <Header changeTheme={changeTheme} themeStatus={themeStatus} themeNowHF={themeNowHF} themeNow={themeNow} />
+        <div style={{ height: "1000px", backgroundColor: themeNow }}>
+
           <Routes>
-            <Route path='/' element={<Home receiveCoin={receiveCoin}></Home>}/>
-            <Route path='/information' element={<Information coin={coin}/>}/>
+            <Route path='/' element={<Home receiveCoin={receiveCoin}></Home>} />
+            <Route path='/information' element={<Information coin={coin} themeNowHF={themeNowHF} />} />
           </Routes>
-        </BrowserRouter>
-      </div>
-      <Footer changeTheme = { changeTheme } themeStatus = { themeStatus } themeNowHF = { themeNowHF }/>
+        </div>
+        <Footer changeTheme={changeTheme} themeStatus={themeStatus} themeNowHF={themeNowHF} />
+      </BrowserRouter>
     </>
   );
 }

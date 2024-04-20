@@ -6,46 +6,154 @@ import ethereum from '../../Imgs/icons_coins/ethereum.png'
 const Home = ({receiveCoin}) =>{
     const cotations = [
         {
-            name: "Bitcoin",
-            value: 63600,
-            code: "BTC",
-            img: bitcoin
+            name:"Bitcoin",
+            value:63600,
+            code:"BTC",
+            img:bitcoin
         },
         {
-            name: "Ethereum",
-            value: 3046,
-            code: "ETH",
-            img: ethereum
+            name:"Ethereum",
+            value:3046,
+            code:"ETH",
+            img:ethereum
         },
         {
-            name: "Solana",
-            value: 141,
-            code: "SOL",
-            img: solana
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
         },
         {
-            name: "Solana",
-            value: 141,
-            code: "SOL",
-            img: solana
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
         },
         {
-            name: "Solana",
-            value: 141,
-            code: "SOL",
-            img: solana
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
         },
         {
-            name: "Solana",
-            value: 141,
-            code: "SOL",
-            img: solana
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
+        },
+        {
+            name:"Solana",
+            value:141,
+            code:"SOL",
+            img:solana
         },
     ]
 
-    return (
+    return(
         <section className=''>
-            <div className='d-flex justify-content-around p-5'>
+            <div className='d-flex flex-wrap gap-4 justify-content-around p-5'>
             {cotations.map((coin,index)=>{
                 return <Coin coin={coin} key={index} receiveCoin={receiveCoin}/>
             })}

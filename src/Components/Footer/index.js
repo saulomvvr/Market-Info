@@ -9,11 +9,21 @@ const Footer = ({themeNowHF}) =>{
     return(
         <footer style={{backgroundColor: themeNowHF}}>
             <div className='d-flex justify-content-center p-5'>
-                <img src={logoInsta} width={"64px"} className='mx-5'></img>
-                <img src={logoYoutube} width={"64px"} className='mx-5'></img>
-                <img src={logoLinkedin} width={"64px"} className='mx-5'></img>
-                <img src={logoGithub} width={"64px"} className='mx-5'></img>
-                <img src={logoTwitter} width={"64px"} className='mx-5'></img>
+                <a href="">
+                    <img src={logoInsta} width={"64px"} className='mx-5'></img>
+                </a>
+                <a href="">
+                    <img src={logoYoutube} width={"64px"} className='mx-5'></img>
+                </a>
+                <a href="">
+                    <img src={logoLinkedin} width={"64px"} className='mx-5'></img>
+                </a>
+                <a href="">
+                    <img src={logoGithub} width={"64px"} className='mx-5'></img>
+                </a>
+                <a href="">
+                    <img src={logoTwitter} width={"64px"} className='mx-5'></img>
+                </a>
             </div>
         </footer>
     )

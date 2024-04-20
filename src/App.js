@@ -6,7 +6,7 @@ import Home from './Components/Home';
 import { useState } from 'react';
 
 function App() {
-  const lightColor = "#FFFFFF";
+  const lightColor = "#e9dfff";
   const darkColor = "#000021";
   const [mode, setMode] = useState("Light");
   const [themeStatus, setThemeStatus] = useState("☀️");

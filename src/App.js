@@ -4,6 +4,7 @@ import Footer from './Components/Footer';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import { useState } from 'react';
+import Information from './Components/Information';
 
 function App() {
   const lightColor = "#e9dfff";
@@ -12,6 +13,8 @@ function App() {
   const [themeStatus, setThemeStatus] = useState("☀️");
   const [themeNow, setThemeNow] = useState(lightColor);
   const [themeNowHF, setThemeNowHF] = useState(darkColor);
+
+  const [coin,setCoin]=useState({})
 
   function changeTheme(){
       if(mode === "Light"){
@@ -27,13 +30,18 @@ function App() {
         setThemeNowHF(darkColor);
       }
     };
+
+    function receiveCoin(c){
+      setCoin(c)
+    }
   return (
     <>
       <Header changeTheme = { changeTheme } themeStatus = { themeStatus } themeNowHF = { themeNowHF } themeNow = { themeNow } />
       <div style={{height:"1000px", backgroundColor: themeNow}}>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Home></Home>}/>
+            <Route path='/' element={<Home receiveCoin={receiveCoin}></Home>}/>
+            <Route path='/information' element={<Information coin={coin}/>}/>
           </Routes>
         </BrowserRouter>
       </div>

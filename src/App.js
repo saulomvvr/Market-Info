@@ -7,7 +7,7 @@ import { useState } from 'react';
 import Information from './Components/Information';
 
 function App() {
-  const lightColor = "#FFFFFF";
+  const lightColor = "#e9dfff";
   const darkColor = "#000021";
   const [mode, setMode] = useState("Light");
   const [themeStatus, setThemeStatus] = useState("☀️");

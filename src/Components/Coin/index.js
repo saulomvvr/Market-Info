@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
-import btc from '../../Imgs/icons_coins/bitcoin.png'
-const Coin = ({coin,receiveCoin}) =>{
+import { Link } from 'react-router-dom';
+import btc from '../../Imgs/icons_coins/bitcoin.png';
+
+const Coin = ({coin, receiveCoin}) =>{
     return(
         <Link to={"/information"} onClick={(e)=>{receiveCoin(coin)}}>
             <div className="d-flex flex-column align-items-base shadow p-3 mb-5 rounded" style={{backgroundColor:"#603c99", width:"280px"}} >
@@ -14,6 +15,5 @@ const Coin = ({coin,receiveCoin}) =>{
             </div>
         </Link>
     )
-    //dfdsfsdf
 }
 export default Coin

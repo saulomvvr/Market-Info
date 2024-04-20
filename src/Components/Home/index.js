@@ -3,7 +3,11 @@ import Coin from '../Coin';
 import bitcoin from '../../Imgs/icons_coins/bitcoin.png'
 import solana from '../../Imgs/icons_coins/solana.png'
 import ethereum from '../../Imgs/icons_coins/ethereum.png'
-const Home = ({receiveCoin}) =>{
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+const Home = ({ receiveCoin }) => {
     const cotations = [
         {
             name: "Bitcoin",
@@ -41,15 +45,17 @@ const Home = ({receiveCoin}) =>{
             code: "SOL",
             img: solana
         },
-    ]
+    ];
 
     return (
-        <section className=''>
-            <div className='d-flex justify-content-around p-5'>
-            {cotations.map((coin,index)=>{
-                return <Coin coin={coin} key={index} receiveCoin={receiveCoin}/>
-            })}
-            </div>
+        <section className='text-align-center'>
+                    <div className='d-flex flex-wrap align-middle'>
+                        <div className='d-flex flex-wrap gap-4 p-5'>
+                            {cotations.map((coin, index) => {
+                                return <Coin coin={coin} key={index} receiveCoin={receiveCoin} />
+                            })}
+                        </div>
+                    </div>
         </section>
     )
 }

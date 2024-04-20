@@ -5,6 +5,7 @@ import Header from './Components/Header';
 import Home from './Components/Home';
 import { useState } from 'react';
 import Information from './Components/Information';
+import NotFound from './Components/NotFound';
 
 function App() {
   const lightColor = "#e9dfff";
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home receiveCoin={receiveCoin}></Home>} />
             <Route path='/information' element={<Information coin={coin} themeNowHF={themeNowHF} />} />
+            <Route path='*' element={<NotFound/>}/>
           </Routes>
         </div>
         <Footer changeTheme={changeTheme} themeStatus={themeStatus} themeNowHF={themeNowHF} />

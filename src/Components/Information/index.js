@@ -8,7 +8,7 @@ const Information = ({ coin, themeNowHF, themeNow }) => {
                     <h1 className="">{coin.name}</h1>
                 </div>
                 <div /*Info Right*/className="flex-fill bd-highlight" style={{width: '70%'}}>
-                    <h1>lorem</h1>
+                    <h1 className="text-light">{coin.value.toFixed(5)}</h1>
                 </div>
             </div>
         </div>

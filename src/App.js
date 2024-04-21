@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Routes,Route, useAsyncError } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
@@ -6,6 +6,7 @@ import Home from './Components/Home';
 import { useState } from 'react';
 import Information from './Components/Information';
 import NotFound from './Components/NotFound';
+import { getCoin } from './apiService';
 
 function App() {
   //ThemeMods
@@ -34,15 +35,16 @@ function App() {
   //Coins
   const [coin,setCoin]=useState({})
   const [order,setOrder]=useState("Popular")
+  const [value,setValue]= useState({})
 
   
 
-    function receiveCoin(c){
+    async function receiveCoin(c){
+      await getCoin(c.code).then((data)=>data.json()).then((data)=>c.value=data.rate).catch((err)=>console.log(err))
       setCoin(c)
     }
 
     function updateOrder (order){
-      console.log(order)
       setOrder(order)
     }
 

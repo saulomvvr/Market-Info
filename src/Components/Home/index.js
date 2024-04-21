@@ -11,6 +11,7 @@ import usdc from '../../Imgs/icons_coins/usdc.png'
 import xrp from '../../Imgs/icons_coins/xrp.png'
 import litecoin from '../../Imgs/icons_coins/litecoin.png'
 import { useEffect, useState } from 'react';
+import { getCoin } from '../../apiService';
 
 const Home = ({ receiveCoin,order }) => {
 
@@ -136,8 +137,9 @@ const Home = ({ receiveCoin,order }) => {
         },
         
     ]
-
     const [cotations,setCotations] =useState(cotationsPerm);
+
+    
 
     useEffect(()=>{
         
@@ -159,8 +161,6 @@ const Home = ({ receiveCoin,order }) => {
             setCotations(cotationsPerm.filter((coin)=>{return coin.variant>=0}))
         }
     },[order])
-    
-
     
     return (
         <section className='text-align-center'>

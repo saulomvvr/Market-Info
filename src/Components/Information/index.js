@@ -1,15 +1,16 @@
-const Information = ({coin,themeNowHF}) => {
+const Information = ({ coin, themeNowHF, themeNow }) => {
     return (
-        <div className="p-5">
-            <div className="d-flex align-items-end">
-                <div className="d-flex align-items-center">
-                    <img src={coin.img} width={"50px"} height={"50px"}></img>
-                    <h1 className="px-3" style={{color:themeNowHF}}>{coin.code}</h1>
+        
+        <div /*Fundo da pagina*/className="w-auto mw-100 h-100 mh-100 d-flex justify-content-center p-5" style={{backgroundColor: themeNow}}>
+            <div /*Fundo da informaçao*/className="rounded-5 d-flex bd-highlight" style={{backgroundColor: themeNowHF, width: '95%', height: '95%', maxWidth: '95%'}}>
+                <div /*Info Left*/className="flex-fill bd-highlight d-flex flex-row" style={{width: '30%'}}>
+                    <img src={coin.img} width={'64px'} height={'64px'}></img>
+                    <h1 className="">{coin.name}</h1>
                 </div>
-                <h3 className="px-3" style={{color:themeNowHF}}>Informations</h3>
-                <h3 className="px-3" style={{color:themeNowHF}}>Transations</h3>
+                <div /*Info Right*/className="flex-fill bd-highlight" style={{width: '70%'}}>
+                    <h1>lorem</h1>
+                </div>
             </div>
-            <h3 className="px-3 p-2">{`USD ${coin.value.toFixed(2)}`}</h3>
         </div>
     )
 }

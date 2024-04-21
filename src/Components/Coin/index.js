@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import btc from '../../Imgs/icons_coins/bitcoin.png';
 
 const Coin = ({coin, receiveCoin}) =>{
     return(

@@ -10,9 +10,6 @@ import bnb from '../../Imgs/icons_coins/bnb.png'
 import usdc from '../../Imgs/icons_coins/usdc.png'
 import xrp from '../../Imgs/icons_coins/xrp.png'
 import litecoin from '../../Imgs/icons_coins/litecoin.png'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const Home = ({ receiveCoin }) => {
     const cotations = [
@@ -90,5 +87,5 @@ const Home = ({ receiveCoin }) => {
         </section>
     )
 }
-//fdsf
+
 export default Home

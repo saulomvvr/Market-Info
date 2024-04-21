@@ -3,6 +3,13 @@ import Coin from '../Coin';
 import bitcoin from '../../Imgs/icons_coins/bitcoin.png'
 import solana from '../../Imgs/icons_coins/solana.png'
 import ethereum from '../../Imgs/icons_coins/ethereum.png'
+import dogecoin from '../../Imgs/icons_coins/dogecoin.png'
+import shibainu from '../../Imgs/icons_coins/shiba-inu.png'
+import tether from '../../Imgs/icons_coins/tether.png'
+import bnb from '../../Imgs/icons_coins/bnb.png'
+import usdc from '../../Imgs/icons_coins/usdc.png'
+import xrp from '../../Imgs/icons_coins/xrp.png'
+import litecoin from '../../Imgs/icons_coins/litecoin.png'
 import { useEffect, useState } from 'react';
 
 const Home = ({ receiveCoin,order }) => {

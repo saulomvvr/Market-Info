@@ -29,15 +29,71 @@ const Home = ({ receiveCoin,order }) => {
             code:"ETH",
             img:ethereum,
             popular:2,
-            variant:-2.5
+            variant:-23.7
         },
         {
             name:"Solana",
-            value:312323,
+            value:141,
             code:"SOL",
             img:solana,
             popular:3,
-            variant:-6.5
+            variant:4.7
+        },
+        {
+            name:"Shiba Inu",
+            value:141,
+            code:"SHIB",
+            img:shibainu,
+            popular:4,
+            variant:3.6
+        },
+        {
+            name:"Dogecoin",
+            value:141,
+            code:"DOGE",
+            img:dogecoin,
+            popular:5,
+            variant:4.5
+        },
+        {
+            name:"Tether",
+            value:141,
+            code:"USDT",
+            img:tether,
+            popular:6,
+            variant:2.5
+        },
+        {
+            name:"BNB",
+            value:141,
+            code:"BNB",
+            img:bnb,
+            popular:7,
+            variant:-2.5
+        },
+        {
+            name:"USDC",
+            value:141,
+            code:"USDC",
+            img:usdc,
+            popular:8,
+            variant:-22.5
+        },
+        {
+            name:"XRP",
+            value:141,
+            code:"XRP",
+            img:xrp,
+            popular:9,
+            variant:23.5
+        },
+        {
+            name:"Litecoin",
+            value:141,
+            code:"LTC",
+            img:litecoin,
+            popular:10,
+            variant:42.5
         },
         
     ]

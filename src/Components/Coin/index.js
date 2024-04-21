@@ -1,8 +1,6 @@
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getCoin } from '../../apiService';
 
-const Coin = ({coin, receiveCoin,price}) =>{
+const Coin = ({coin, receiveCoin}) =>{
 
     
     return(
@@ -15,7 +13,7 @@ const Coin = ({coin, receiveCoin,price}) =>{
                     </h3>
                 </div>
                 <div className='d-flex align-items-base'>
-                    <h3 className="text-light px-2" >{`$ ${coin.value.toFixed(3)}`}</h3>
+                    <h3 className="text-light px-2" >{`$ ${coin.value.toFixed(2)}`}</h3>
                     <h3 className=' px-2' style={coin.variant<0 ?{color:"#E72929"}:{color:"green"}}>{`${coin.variant.toFixed(1)}%`}</h3>
                 </div>
 

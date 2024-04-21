@@ -10,7 +10,7 @@ const Information = ({ coin, themeNowHF, themeNow }) => {
                         <h2 /*Coin Name*/ className="mt-3 ms-3" style={{ fontSize: '64px', color: coin.color }}>{coin.code}</h2>
                     </div>
                     <div /*Coin Price*/ className="d-flex align-items-center">
-                        <h2 /*Coin Price USD*/ className="mt-3 ms-3" style={{ fontSize: '64px', color: themeNow }}>{`${coin.value.toFixed(2)}`}</h2>
+                        <h2 /*Coin Price USD*/ className="mt-3 ms-3" style={{ fontSize: '64px', color: themeNow }}>{`${coin.value.toFixed(5)}`}</h2>
                         <h2 /*Coin Price USD*/ className="mt-3 ms-3" style={{ fontSize: '32px', color: themeNow }}>{`USD`}</h2>
                     </div>
                     <div /*Oficials Medias*/ className="d-flex flex-column bd-highlight mb-3">

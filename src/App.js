@@ -54,7 +54,7 @@ function App() {
 
           <Routes>
             <Route path='/' element={<Home receiveCoin={receiveCoin} order={order}></Home>} />
-            <Route path='/information' element={<Information coin={coin} themeNowHF={themeNowHF} />} />
+            <Route path='/information' element={<Information coin={coin} themeNowHF={themeNowHF} themeNow={themeNow}/>} />
             <Route path='*' element={<NotFound/>}/>
           </Routes>
         </div>
